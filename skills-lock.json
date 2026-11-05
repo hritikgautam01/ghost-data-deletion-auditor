@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "discover-api": {
+      "source": "rand/cc-polymath",
+      "sourceType": "github",
+      "skillPath": "skills/discover-api/SKILL.md",
+      "computedHash": "81a6713e82e6b42dce5d34d5dc497ceaf4a834f58b6562e88de5605ed3fc8d1f"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "106acf230014cbb43ca34e6410371321b56ca742f9ee0442e8ec05bf02eb0384"
+    },
+    "grill-me": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "computedHash": "5e0c683385eafd83f106ac6c9d67dfbbfe5aa4b3fe65aad114eb1055a99c818f"
+    },
+    "testing-and-debugging": {
+      "source": "sayem7456/opencode-engineering-skills",
+      "sourceType": "github",
+      "skillPath": "skills/testing-and-debugging/SKILL.md",
+      "computedHash": "cdd54c5ff2c40077772dcd5c61e6690f47f830a9289385e0d2144cdf2c8dbc53"
+    }
+  }
+}

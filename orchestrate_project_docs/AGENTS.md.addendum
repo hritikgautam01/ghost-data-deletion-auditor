@@ -1,0 +1,51 @@
+# Project-specific coding-agent instructions
+
+> Merge these rules into the repository's existing `AGENTS.md`; do not replace the official file. Preserve all original hackathon requirements, especially `log.txt` transcript logging and submission rules.
+
+## Source of truth
+
+Before changing code, read:
+- the official root `AGENTS.md`;
+- `problem_statement.md`;
+- `docs/API.md`, `docs/ARCHITECTURE.md`, `docs/DATA_MODEL.md`, `docs/DECISIONS.md`, `docs/PRD.md`;
+- `project-notes/PROJECT_STATE.md`, `project-notes/TASKS.md`, and the recent entries in `project-notes/WORKLOG.md`.
+
+Inspect the actual input schemas and artifacts before relying on assumed fields. The uploaded request CSV by itself is not the complete evidence corpus.
+
+## Working rules
+
+1. Make the smallest coherent change that advances the current task.
+2. Do not invent dataset fields, evidence IDs, resource IDs, policy rules, test outcomes, metrics, token counts or costs.
+3. Do not hardcode case IDs, expected labels, sample-output answers or case-family shortcuts.
+4. Keep identity resolution, timestamps, policy logic, ordering and serialization deterministic wherever possible.
+5. Treat workflow statuses and activity results as claims until corroborated.
+6. Respect `audit_at`; evidence from later than the cutoff must not affect the case.
+7. Do not delete required retained records. Apply the supplied policy to tombstones and direct identifiers.
+8. Do not add output keys, phases, operations or states outside the official contract.
+9. Never say tests pass unless they were actually run; record command and result.
+10. Do not put credentials, API keys, tokens or unnecessary personal data into code, docs, logs or reports.
+
+## Required note updates after every meaningful turn
+
+After each user prompt that changes scope, a design choice, implementation, test, evaluation or plan—and after every code change—update the living notes before finishing the turn:
+
+- `project-notes/PROJECT_STATE.md`: current implementation truth, files/components changed, last verified command, current blockers and next action.
+- `project-notes/TASKS.md`: mark a task complete only when evidence supports it; add discovered work and blockers.
+- `project-notes/WORKLOG.md`: append a dated entry describing the prompt/task, changes, tests actually run, outcomes and next step.
+
+If a turn is discussion-only and no project state changes, add a brief worklog entry only when it materially changes the plan; do not fabricate code activity. Never rewrite the worklog history. Keep the official `log.txt` transcript updated according to the original root `AGENTS.md`; the project notes do not replace it.
+
+## Before editing
+
+1. Confirm repository root and current branch.
+3. Read the relevant files and existing tests.
+4. State a short plan internally or in the response when useful.
+
+## Before finishing a coding turn
+
+1. Run the narrowest relevant tests, then broader checks if time permits.
+2. Validate output schema and deterministic ordering when output logic changes.
+3. Report what changed, which commands ran, actual results, and anything not tested.
+4. Update the three project notes listed above.
+5. Append the required official transcript entry to `log.txt` as directed by the original `AGENTS.md`.
+6. Never claim that documentation or project notes self-update automatically unless a tool or agent workflow actually performed the update. These instructions are a convention for the coding agent to follow, not a filesystem watcher.

@@ -1,0 +1,94 @@
+Phase 0 — Understand the data
+First
+
+Inspect the repository, CSV schemas, policies, evidence formats and expected outputs. Establish what the agent must actually solve.
+
+Deliverable: a verified data inventory and test plan.
+
+
+
+
+Phase 1 — Build the input loader
+
+Read CSV files, discover local evidence files, validate inputs and handle missing or malformed files.
+
+Deliverable: reliable structured input, with no AI involved yet.
+
+
+
+
+Phase 2 — Read and normalize evidence
+
+Extract useful information from text, JSON, CSV, SQL, logs, PDFs and images as supported by the actual corpus. Preserve source locations and provenance.
+
+Deliverable: a searchable, normalized evidence collection.
+
+
+
+
+Phase 3 — Resolve user identities
+
+Connect current and historical identifiers using evidence, timestamps and relationship records. Avoid incorrect matches between different people.
+
+Deliverable: a per-request identity profile with supporting evidence.
+
+
+
+
+Phase 4 — Build the policy engine
+
+Determine which copies must be deleted, redacted or anonymized, and which records must be retained.
+
+Deliverable: explicit, testable policy decisions.
+
+
+
+
+Phase 5 — Detect remaining data and recreation paths
+
+Identify surviving records, stale indexes, exports, backups and active synchronization or restoration paths, based on the supplied evidence.
+
+Deliverable: a list of unresolved deletion obligations and recreation risks.
+
+
+
+
+Phase 6 — Generate the audit decision and action plan
+
+Classify each request, produce ordered remediation steps when incomplete, and verification steps when complete.
+
+Deliverable: structured decisions ready for serialization.
+
+
+
+
+Phase 7 — Add AI where it helps
+
+Use an LLM or other model for genuinely ambiguous evidence interpretation if needed. Keep policy enforcement, status validation and output formatting deterministic wherever possible.
+
+Deliverable: a better evidence interpreter without giving the model unrestricted authority.
+
+
+
+
+Phase 8 — Evaluation and debugging
+
+Test known examples, edge cases, policy invariants and cases without expected answers. Track failures and fix root causes.
+
+Deliverable: a repeatable evaluation workflow.
+
+
+
+
+Phase 9 — Generate the final submission
+
+Process every request, validate output.csv, generate required reports and prepare the code ZIP and chat transcript.
+
+Deliverable: submission-ready artifacts.
+
+
+
+
+Optional Phase 10 — Frontend
+
+Only after the core agent works, build a dashboard for viewing evidence, findings, status and remediation steps if time permits and the submission benefits from it.

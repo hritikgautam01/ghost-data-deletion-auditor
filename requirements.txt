@@ -1,0 +1,3 @@
+# HackerRank Orchestrate — Ghost Data Still Exists
+# Python Version: Python 3.10+
+# Dependencies: Standard library only (zero external third-party packages required).
